@@ -1,0 +1,25 @@
+<div class="card horizontal">
+  <div class="card-image">
+    <img src="http://via.placeholder.com/64/f1f1f1/ff0000?text=H">
+  </div>
+  <div class="card-stacked">
+    <div class="card-content">
+      <span class="card-title"><b>{{ clinic.name }}</b></span>
+      <p>{{ clinic.sub }}<br>{{ clinic.text }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="collection with-header">
+  <div class="collection-header"><h5>Doctors</h5></div>
+  <a *ngFor="let doctor of clinic.child1" [routerLink]="['/doctor', doctor.id]" class="collection-item avatar">
+    <img src="http://via.placeholder.com/42?text=Dr." alt="" class="circle">
+    <span class="title">{{ doctor.name }}</span>
+    <p>{{ doctor.sub }}, {{ doctor.text }}</p>
+  </a>
+</div>
+
+<div class="collection with-header">
+  <div class="collection-header"><h5>Receptionists</h5></div>
+  <a *ngFor="let receptionist of clinic.child2" [routerLink]="['/receptionist', receptionist.id]" class="collection-item">{{ receptionist.name }}</a>
+</div>

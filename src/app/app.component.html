@@ -1,0 +1,50 @@
+<style type="text/css">
+  .collapsible-body { padding: 0; }
+  ul.collapsible .collapsible-body a { padding-left: 35px; }
+  .search-wrapper input#search {
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    width: 100%;
+    height: 45px;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 45px 0 15px;
+    border: 0;
+  }  
+  .search-wrapper i.material-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6 l4">
+      <ul class="collapsible" data-collapsible="expandable">
+        <li>
+          <b class="collapsible-header active">Clinics<i class="material-icons">&gt;</i></b>
+          <div class="collapsible-body collection">
+            <a *ngFor="let clinic of all.clinics" [routerLink]="['/clinic', clinic.id]" class="collection-item">{{ clinic.name }}</a>
+          </div>
+        </li>
+        <li>
+          <b class="collapsible-header active">Doctors<i class="material-icons">&gt;</i></b>
+          <div class="collapsible-body collection">
+            <a *ngFor="let doctor of all.doctors" [routerLink]="['/doctor', doctor.id]" class="collection-item">{{ doctor.name }}</a>
+          </div>
+        </li>
+        <li>
+          <b class="collapsible-header active">Receptionists<i class="material-icons">&gt;</i></b>
+          <div class="collapsible-body collection">
+            <a *ngFor="let receptionist of all.receptionists" [routerLink]="['/receptionist', receptionist.id]" class="collection-item">{{ receptionist.name }}</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col s12 m6 l8">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

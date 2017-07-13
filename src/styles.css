@@ -1,0 +1,69 @@
+html {
+    font: 14px 'Segoe UI', Roboto, sans-serif;
+}
+
+.row .col {
+    padding: unset;
+}
+
+.collapsible {
+    border-top: unset;
+    box-shadow: unset;
+}
+
+.collapsible-header {
+    border-top: 1px solid #ddd;
+}
+
+.collapsible-header i {
+    float: right;
+    line-height: 2.5rem;
+    margin-right: unset;
+}
+
+.collapsible-body {
+    padding: unset;
+}
+
+.collection a.collection-item {
+    color: black;
+}
+
+.collection .collection-item {
+    background-color: transparent;
+    padding-left: 40px;
+}
+
+.collection .collection-item.active {
+    color: black;
+    background-color: #ddd;
+}
+
+.card {
+    box-shadow: unset;
+    margin: unset;
+}
+
+.card.horizontal .card-image img {
+    border-radius: 50%;
+    margin-top: 40%;
+    margin-left: 20%;
+}
+
+.collection.with-header {
+    margin: unset;
+}
+
+.collection.with-header, .collection .collection-item, .collection.with-header .collection-header {
+    border-left: unset;
+    border-right: unset;
+    border-bottom: unset;
+}
+
+.collection a.collection-item {
+    color: black;
+}
+
+.collection .collection-item.avatar {
+    min-height: unset;
+}
