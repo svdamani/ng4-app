@@ -26,19 +26,28 @@
         <li>
           <b class="collapsible-header active">Clinics<i class="material-icons">&gt;</i></b>
           <div class="collapsible-body collection">
-            <a *ngFor="let clinic of all.clinics" [routerLink]="['/clinic', clinic.id]" class="collection-item">{{ clinic.name }}</a>
+            <a *ngFor="let clinic of all.clinics" 
+                [routerLink]="['/clinic', clinic.id]" 
+                [class.active]="clinic.id === selectedId"
+                class="collection-item">{{ clinic.name }}</a>
           </div>
         </li>
         <li>
           <b class="collapsible-header active">Doctors<i class="material-icons">&gt;</i></b>
           <div class="collapsible-body collection">
-            <a *ngFor="let doctor of all.doctors" [routerLink]="['/doctor', doctor.id]" class="collection-item">{{ doctor.name }}</a>
+            <a *ngFor="let doctor of all.doctors" 
+                [routerLink]="['/doctor', doctor.id]"
+                [class.active]="doctor.id === selectedId"
+                class="collection-item">{{ doctor.name }}</a>
           </div>
         </li>
         <li>
           <b class="collapsible-header active">Receptionists<i class="material-icons">&gt;</i></b>
           <div class="collapsible-body collection">
-            <a *ngFor="let receptionist of all.receptionists" [routerLink]="['/receptionist', receptionist.id]" class="collection-item">{{ receptionist.name }}</a>
+            <a *ngFor="let receptionist of all.receptionists"
+                [routerLink]="['/receptionist', receptionist.id]"
+                [class.active]="receptionist.id === selectedId"
+                class="collection-item">{{ receptionist.name }}</a>
           </div>
         </li>
       </ul>
