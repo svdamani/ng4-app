@@ -21,7 +21,10 @@ export class AppComponent {
 
     this.router.events.subscribe(val=> {
       if (val instanceof NavigationEnd) {
-        this.selectedId = this.router.parseUrl(this.router.url).root.children.primary.segments[1].path
+        try {
+          this.selectedId = this.router.parseUrl(this.router.url).root.children.primary.segments[1].path
+        }
+        catch (e) {}
       }
     })
   }
